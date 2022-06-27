@@ -35,7 +35,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val dataClass1 = Note("Note 27.06.22", "First steps in Kotlin")
         val dataClass2 = dataClass1.copy()
+
+        Log.i("@@@", myCheck(a,b))
+
+        val enumW = WeatherType.RAINY
+        val todayCondition = when(enumW){
+            WeatherType.SUNNY -> TODO()
+            WeatherType.RAINY -> {
+                "Дождливо"
+            }
+            WeatherType.CLOUDY -> TODO()
+            WeatherType.MISTY -> TODO()
+        }
+
+        Log.i("@@@", "За окном: $todayCondition")
     }
+
+    enum class WeatherType {
+        SUNNY,
+        RAINY,
+        CLOUDY,
+        MISTY
+    }
+
 
     override fun onClick(view: View?) {
         when(view?.id){
@@ -46,6 +68,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
+}
+
+/* Java:
+fun myCheck(a:Int, b:Int):String {
+    var result = ""
+    if(a==b){
+        result = "Переменные a и b равны"
+    } else {
+        result = "a != b"
+    }
+    return result
+}
+ */
+fun myCheck(a:Int, b:Int):String {
+    return if(a==b){
+        "Переменные a и b равны"
+    } else {
+        "a != b"
+    }
 }
 
 fun myFunc() {
