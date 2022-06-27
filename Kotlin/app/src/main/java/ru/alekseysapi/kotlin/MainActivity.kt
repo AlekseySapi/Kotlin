@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         a = b
         b = const1
 
+        val student = Student("Aleksey", 29)
+        //print("Студента зовут ${student.name}")
     }
 
     override fun onClick(view: View?) {
@@ -47,3 +49,6 @@ fun sum(a : Int, b : Int) : Int {
 }
 
 fun multi(a: Int, b: Int) = a * b
+
+class Student(val name: String, val age: Int) {
+}
