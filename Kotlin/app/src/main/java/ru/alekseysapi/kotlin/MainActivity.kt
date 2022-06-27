@@ -8,6 +8,10 @@ import android.widget.Button
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var button : Button
+    val const1 : Int = 10
+    val const2 : String = "Infinity"
+    var a = 3
+    var b = 7
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +20,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button.setOnClickListener(this)
 
         myFunc()
+        //const1 += 1
+        //const2 = "Change"
+        a = b
+        b = const1
+
     }
 
     override fun onClick(view: View?) {
