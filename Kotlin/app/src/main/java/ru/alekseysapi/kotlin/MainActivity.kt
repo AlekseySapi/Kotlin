@@ -49,6 +49,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         Log.i("@@@", "За окном: $todayCondition")
+
+
+        // Циклы
+
+        val daysOfWeek = listOf("пн", "вт", "ср", "чт", "пт", "сб", "вс")
+
+
+        daysOfWeek.forEach{
+            Log.i("@@@", "$it")
+        }
+
+        Log.i("@@@", "====================")
+
+        repeat(daysOfWeek.size){
+            Log.i("@@@", "${daysOfWeek[it]}")
+        }
+
+
+        Log.i("@@@", "====================")
+        for(i in 0..daysOfWeek.size step 2){
+            Log.i("@@@", "${daysOfWeek[i]}")
+        }
+
+
+
     }
 
     enum class WeatherType {
