@@ -2,6 +2,7 @@ package ru.alekseysapi.kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 
@@ -25,14 +26,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         a = b
         b = const1
 
+        Log.i("@@@", "Сумма = ${sum(a,b)}")
+        Log.i("@@@", "Произведение = ${multi(b,const1)}")
+
         val student = Student("Aleksey", 29)
-        //print("Студента зовут ${student.name}")
+        student.printName()
+
     }
 
     override fun onClick(view: View?) {
         when(view?.id){
             R.id.button -> {
-                //Действия при нажатии кнопки
+                Log.i("@@@", "Кнопка нажата!")
             }
         }
     }
@@ -51,4 +56,7 @@ fun sum(a : Int, b : Int) : Int {
 fun multi(a: Int, b: Int) = a * b
 
 class Student(val name: String, val age: Int) {
+    fun printName(){
+        Log.i("@@@", "Студента зовут $name")
+    }
 }
