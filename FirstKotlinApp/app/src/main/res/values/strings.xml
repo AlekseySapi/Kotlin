@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FirstKotlinApp</string>
+    <string name="button_name">Button</string>
+    <string name="text2">Приложение запущено</string>
 </resources>
