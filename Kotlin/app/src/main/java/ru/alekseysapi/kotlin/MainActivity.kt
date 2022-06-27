@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val student = Student("Aleksey", 29)
         student.printName()
 
+
+        val dataClass1 = Note("Note 27.06.22", "First steps in Kotlin")
+        val dataClass2 = dataClass1.copy()
     }
 
     override fun onClick(view: View?) {
